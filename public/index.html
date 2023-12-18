@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spacewar!</title>
+    <style>
+        * {
+            margin: 0
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            background-image: url('/img/bg.png');
+        }
+
+        canvas {
+            height: calc(min(100vh - 24px, 2 / 3 * (100vw - 24px)));
+            width: calc(min(1.5 * (100vh - 24px), (100vw - 24px)));
+            border-style: solid;
+            border-width: 2px;
+            border-color: #ffffff;
+            border-radius: 2px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <canvas>
+        <img id="StarsImg" src="./img/8kMilkyWay.jpg" style="display: none" alt="">
+        <img id="GlowingStarImg" src="./img/GlowingStar.png" style="display: none" alt="">
+        <img id="SpaceShipImg" src="./img/SpaceShip.png" style="display: none" alt="">
+        <img id="EnemyShipImg" src="./img/EnemyShip.png" style="display: none" alt="">
+        <img id="MissileImg" src="./img/Missile.svg" style="display: none" alt="">
+    </canvas>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="./src/star.js"></script>
+    <script src="./src/missile.js"></script>
+    <script src="./src/player.js"></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/particle.js"></script>
+</body>
+</html>
